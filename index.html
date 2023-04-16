@@ -23,17 +23,23 @@
 </head>
 
 <body>
-    <a-scene>        
-        <a-assets>            
+    <a-scene>
+        <a-assets>
             <a-asset-item id="tree" src="totoro_05.gltf"> </a-asset-item>
             <!-- <a-mixin id="giant" scale="0.00001 0.00001 0.00001"></a-mixin> -->
         </a-assets>
+
+        <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
         <!-- <a-marker preset="hiro" markerhandler> -->
-            <!-- <a-box position="0 0.5 0" material="color: yellow;"></a-box> -->
-            <!-- defina seu ativo gltf -->            
+        <!-- <a-box position="0 0.5 0" material="color: yellow;"></a-box> -->
+        <!-- defina seu ativo gltf -->
         <!-- </a-marker> -->
         <!-- <a-marker-camera preset='hiro'></a-marker-camera> -->
-        <a-entity gltf-model="#tree"> </a-entity>   
+        <a-entity gltf-model="#tree">
+            <a-plane src="#tree" position="0 0 0" height="0.552" width="1" rotation="0 0 0"></a-plane>
+            <a-gltf-model rotation="0 0 0 " position="0 0 0.1" scale="0.005 0.005 0.005" src="totoro_05.gltf"
+                animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"></a-gltf-model>
+        </a-entity>
         <!-- <a-entity mixin="giant" obj-model="glb: #tree"></a-entity>      -->
         <!-- <a-entity camera></a-entity> -->
     </a-scene>
