@@ -24,21 +24,10 @@
 
 <body>
     <a-scene embedded arjs="trackingMethod: best;">
-        <!-- <a-assets> -->
-            <!-- <a-asset-item id="tree" src="totoro_05.gltf"> </a-asset-item> -->
-        <!-- </a-assets> -->
-
-        <!-- <a-camera position="3 3 3" look-controls="enabled: false"></a-camera> -->
-        <a-marker type="barcode" value="0" smooth="true" smoothCount="10" smoothTolerance="0.01" smoothThreshold="0.1" >
-            <a-entity gltf-model="#tree" position="0 0 0">
-                <a-box color="red" width="0.5" height="0.5" depth="0.5"></a-box>
-                <!-- <a-plane src="#tree" position="0.1 0.1 0.1" height="0.452" width="1" rotation="0 0 0"></a-plane> -->
-                <!-- <a-gltf-model rotation="0 0 0" position="0 0 0.1" scale="0.005 0.005 0.005" src="totoro_05.gltf"
-                    animation="property: position; to: 0.1 0.1 0.1; easing: easeInOutQuad; loop: true; dir: alternate"></a-gltf-model> -->
-            </a-entity>
-        </a-marker>
-        <!-- <a-entity mixin="giant" obj-model="glb: #tree"></a-entity>      -->
-        <!-- <a-entity camera></a-entity> -->
+        <a-assets>
+            <a-asset-item id="tree" src="model.gltf"> </a-asset-item>
+        </a-assets>
+        <a-entity camera></a-entity>
     </a-scene>
 </body>
 
